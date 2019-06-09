@@ -1,0 +1,29 @@
+<div mdbModal #basicModal="mdbModal" class="modal fade in show" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="false" style="display:block;">
+        <div class="modal-dialog" role="document" style="width:300px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p>Olá Sr Claudio, para entender<bR>melhor e poder propor<br>alguma solução, precisamos<br>que nos conte mais<br>detalhes. Qual o motivo do<br>atraso?
+              <br>Gostaria de simular uma<br>negociação?
+            </p>
+            </div>
+            <form [formGroup]="renegociarForm" (ngSubmit)="onSubmit()">
+            <div class="modal-body">
+                    <div class="container">
+                            <select class="browser-default custom-select" formControlName="motivo">
+                                    <option value="" disabled selected>Escolha uma opção</option>
+                                    <option value="Desemprego">Desemprego</option>
+                                    <option value="Diminuição da renda média familiar">Diminuição da renda média familiar</option>
+                                    <option value="Atrasos de salários">Atrasos de salários</option>
+                                    <option value="Enfermidades">Enfermidades</option>
+                                  </select>
+                            <label for="exampleFormControlTextarea1">Descrição</label>
+                                <textarea formControlName="descricao" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" routerLink="/emprestimos"  mdbWavesEffect>Cancelar</button>
+                        <button  type="submit"  mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Enviar</button>
+                    </div>
+                </form>
+          </div>
+</div>
